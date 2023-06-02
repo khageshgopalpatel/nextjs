@@ -3,7 +3,7 @@ import { writeFile } from "fs/promises";
 
 export default async function Home() {
 
-  await writeFile("./public/hello.json", JSON.stringify({ hello }), { encoding: "utf-8" });
+  await writeFile("./public/hello.json", JSON.stringify({ hello: "hello" }), { encoding: "utf-8" });
 
 
   return (
