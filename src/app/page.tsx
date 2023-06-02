@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { writeFile } from "fs/promises";
 
-export default function Home() {
+export default async function Home() {
 
   await writeFile("./public/hello.json", JSON.stringify({ hello }), { encoding: "utf-8" });
 
