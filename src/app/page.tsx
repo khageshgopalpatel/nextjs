@@ -1,6 +1,11 @@
 import Image from 'next/image'
+import { writeFile } from "fs/promises";
 
 export default function Home() {
+
+  await writeFile("./public/hello.json", JSON.stringify({ hello }), { encoding: "utf-8" });
+
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
